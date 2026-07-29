@@ -1,0 +1,44 @@
+market: FR
+timezone: Europe/Paris
+# Short demonstration horizon. Multi-year horizons are supported but should be run in windows.
+start: "2027-01-01"
+end: "2027-01-14 23:00"
+historical_start: "2022-01-01"
+historical_end: "2025-12-31 23:00"
+dispatch_mode: expected
+dispatch_quantile: null
+minimum_revenue_target_eur: 10000
+output_dir: data/processed/demo
+battery:
+  max_charge_mw: 50
+  max_discharge_mw: 50
+  energy_capacity_mwh: 100
+  charge_efficiency: 0.9434
+  discharge_efficiency: 0.9434
+  min_soc_mwh: 0
+  max_soc_mwh: 100
+  initial_soc_mwh: 50
+  final_soc_mwh: 50
+  min_mode_duration_hours: 0
+  variable_charge_cost_eur_mwh: 0
+  variable_discharge_cost_eur_mwh: 0.5
+  degradation_cost_eur_mwh: 3
+  max_equivalent_cycles_per_day: 1.5
+  unavailable_timestamps: []
+  availability_factor: 1
+  timestep_hours: 1
+scenarios:
+  method: bootstrap
+  n_scenarios: 20
+  seed: 42
+  block_days: 7
+hedge:
+  enabled: true
+  products: both
+  objective: min_variance
+  risk_aversion_lambda: 0
+  min_volume_mw: -50
+  max_volume_mw: 50
+  volume_step_mw: null
+  regularization: 0.000001
+

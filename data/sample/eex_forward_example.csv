@@ -1,0 +1,6 @@
+observation_date,delivery_start,delivery_end,product,load_type,price_eur_mwh,volume_mw,currency,market
+2026-07-29,2027-01-01,2027-12-31 23:00,Calendar Year+1 Baseload,baseload,72.00,1.0,EUR,FR
+2026-07-29,2027-01-01,2027-12-31 23:00,Calendar Year+1 Peakload,peakload,83.00,1.0,EUR,FR
+2026-07-29,2028-01-01,2028-12-31 23:00,Calendar Year+2 Baseload,baseload,69.00,1.0,EUR,FR
+2026-07-29,2028-01-01,2028-12-31 23:00,Calendar Year+2 Peakload,peakload,79.00,1.0,EUR,FR
+
